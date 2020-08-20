@@ -178,7 +178,7 @@ msgstr "סדר"
 
 #: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
 msgctxt "#31033"
-msgid "Your rating"
+msgid "My rating"
 msgstr "הדירוג שלך"
 
 #: /xml/DialogVideoInfo.xml
@@ -537,14 +537,14 @@ msgctxt "#31124"
 msgid "Show images on map"
 msgstr "הצג תמונות"
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#31125"
-msgid "Press [B]Up[/B] for actor info"
-msgstr "לחצו על [B]למעלה[/B] לקבלת מידע על שחקן"
+msgid "is"
+msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
-msgid "Press OK to read plot"
+msgid "Press [B]OK[/B] to show plot"
 msgstr "הקש 'אישור' כדי לקרוא את העלילה"
 
 #: /xml/Includes_MediaMenu.xml
@@ -1813,20 +1813,20 @@ msgctxt "#40219"
 msgid "Optional add-ons"
 msgstr "הרחבות אופציונליות"
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#40220"
-msgid "Click button to play movie trailer[CR][CR][CR]Click again to stop playback"
-msgstr "לחץ על הלחצן כדי לנגן את הקדימון של הסרט[CR][CR][CR]לחץ שוב כדי להפסיק את הניגון"
+msgid "Directed by"
+msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#40221"
-msgid "Stop playback"
-msgstr "עצור את הניגון"
+msgid "Similar to"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#40222"
-msgid "Play trailers on movie information screen"
-msgstr "נגן קדימון על מסך מידע הסרט"
+msgid "Play trailers in full screen"
+msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#40223"

@@ -82,7 +82,7 @@
 					<control type="group">
 						<left>293</left>
 						<top>937</top>
-						<visible>![Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+						<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(50) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
 						<include content="RatingCircle" condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">
 							<param name="animation" value="True" />
 						</include>
@@ -447,7 +447,7 @@
 					<top>591</top>
 					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating) | Skin.HasSetting(circle_bothrating)">RatingCircle</include>
 					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
-					<visible>![Control.IsVisible(55) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) | String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
+					<visible>![[Container.Content(movies) | Container.Content(episodes)] + Control.IsVisible(55) + [String.IsEqual(Container.SortMethod,$LOCALIZE[556]) | String.IsEqual(Container.SortMethod,$LOCALIZE[20359]) | String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_rating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_userrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[563]) + Skin.HasSetting(circle_bothrating)] | [String.IsEqual(Container.SortMethod,$LOCALIZE[38018]) + Skin.HasSetting(circle_bothrating)]]]</visible>
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.IsEmpty(ListItem.Plot)</visible>

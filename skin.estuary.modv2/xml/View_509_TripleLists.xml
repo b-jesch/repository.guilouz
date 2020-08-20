@@ -760,7 +760,7 @@
 							<top>20</top>
 							<width>120</width>
 							<height>120</height>
-							<texture fallback="DefaultVideoFanart.png">$VAR[InfoWallThumbVar]</texture>
+							<texture fallback="DefaultVideoFanart.png">$VAR[InfoWallThumbVar2]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>
@@ -812,7 +812,7 @@
 							<top>20</top>
 							<width>120</width>
 							<height>120</height>
-							<texture fallback="DefaultVideoFanart.png">$VAR[InfoWallThumbVar]</texture>
+							<texture fallback="DefaultVideoFanart.png">$VAR[InfoWallThumbVar2]</texture>
 							<aspectratio align="left" aligny="center">keep</aspectratio>
 							<bordertexture>colors/white.png</bordertexture>
 							<bordersize>1</bordersize>

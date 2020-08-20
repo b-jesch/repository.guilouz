@@ -10,9 +10,9 @@
 		<texturefocus colordiffuse="$VAR[SkinColorVar]">osd/fullscreen/buttons/button-fo-76.png</texturefocus>
 		<width>56</width>
 		<animation type="Focus" condition="!Skin.HasSetting(no_animations)" reversible="false">
-            <effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
-            <effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
-        </animation>    
+			<effect type="zoom" end="125" time="75" tween="sine" easing="out" center="auto" />
+			<effect type="zoom" end="80" time="225" tween="sine" delay="100" easing="out" center="auto" />
+		</animation>
 		<height>56</height>
 		<radiowidth>54</radiowidth>
 		<radioheight>54</radioheight>
@@ -22,20 +22,51 @@
 		<radioposy>0</radioposy>
 	</include>
 	<include name="InfoDialogMetadata">
-		 <param name="textcolor">white</param>
-		 <param name="width">567</param>
-        <definition>
-            <control type="label" id="$PARAM[control_id]">
-                <width>$PARAM[width]</width>
-                <height>40</height>
-                <aligny>center</aligny>
-                <font>font12</font>
-                <label>$PARAM[label]</label>
-                <textcolor>$PARAM[textcolor]</textcolor>
-                <visible>$PARAM[visible]</visible>
-                <scroll>true</scroll>
-            </control>
-        </definition>
+		<param name="textcolor">white</param>
+		<param name="width">567</param>
+		<param name="font">font12</param>
+		<definition>
+			<control type="label" id="$PARAM[control_id]">
+				<width>$PARAM[width]</width>
+				<height>40</height>
+				<aligny>center</aligny>
+				<font>$PARAM[font]</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$PARAM[textcolor]</textcolor>
+				<visible>$PARAM[visible]</visible>
+				<scroll>true</scroll>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoDialogMetadata2">
+		<param name="textcolor">white</param>
+		<param name="font">font12</param>
+		<definition>
+			<control type="label" id="$PARAM[control_id]">
+				<left>0</left>
+				<right>50</right>
+				<height>40</height>
+				<aligny>center</aligny>
+				<font>$PARAM[font]</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$PARAM[textcolor]</textcolor>
+				<visible>$PARAM[visible]</visible>
+				<scroll>true</scroll>
+				<visible>String.IsEqual(Control.GetLabel(3335),fallback.png)</visible>
+			</control>
+			<control type="label" id="$PARAM[control_id]">
+				<left>0</left>
+				<right>430</right>
+				<height>40</height>
+				<aligny>center</aligny>
+				<font>$PARAM[font]</font>
+				<label>$PARAM[label]</label>
+				<textcolor>$PARAM[textcolor]</textcolor>
+				<visible>$PARAM[visible]</visible>
+				<scroll>true</scroll>
+				<visible>!String.IsEqual(Control.GetLabel(3335),fallback.png)</visible>
+			</control>
+		</definition>
 	</include>
 	<include name="DefaultSettingButton">
 		<param name="height">70</param>
@@ -205,9 +236,10 @@
 	<include name="VideoInfoButtonsCommon">
 		<param name="width">262</param>
 		<param name="radioposx">108</param>
+		<param name="height">142</param>
 		<definition>
 			<width>$PARAM[width]</width>
-			<height>142</height>
+			<height>$PARAM[height]</height>
 			<align>center</align>
 			<aligny>top</aligny>
 			<texturefocus border="21" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texturefocus>
@@ -258,6 +290,42 @@
 				<onclick condition="$PARAM[condition_2]">$PARAM[onclick_2]</onclick>
 				<onclick condition="$PARAM[condition_3]">$PARAM[onclick_3]</onclick>
 				<onclick condition="$PARAM[condition_4]">$PARAM[onclick_4]</onclick>
+				<visible>$PARAM[visible]</visible>
+				<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
+			</control>
+		</definition>
+	</include>
+	<include name="InfoDialogSmallButton">
+		<param name="width">148</param>
+		<param name="radioposx">50</param>
+		<param name="condition_1"></param>
+		<param name="condition_2"></param>
+		<param name="condition_3"></param>
+		<param name="condition_4"></param>
+		<param name="condition_5"></param>
+		<definition>
+			<control type="radiobutton" id="$PARAM[id]">
+				<oninfo>$PARAM[oninfo]</oninfo>
+				<width>$PARAM[width]</width>
+				<height>110</height>
+				<align>center</align>
+				<aligny>top</aligny>
+				<texturefocus border="21" colordiffuse="$VAR[SkinColorVar]">buttons/button-fo.png</texturefocus>
+				<texturenofocus border="21">buttons/button-nofo.png</texturenofocus>
+				<radioposx>$PARAM[radioposx]</radioposx>
+				<radioposy>17</radioposy>
+				<radiowidth>48</radiowidth>
+				<textureradioonfocus colordiffuse="FFFFFFFF">$PARAM[icon]</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="FFFFFFFF">$PARAM[icon]</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="FFFFFFFF">$PARAM[icon]</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="FFFFFFFF">$PARAM[icon]</textureradiooffnofocus>
+				<textureradiooffdisabled colordiffuse="disabled">$PARAM[icon]</textureradiooffdisabled>
+				<textureradioondisabled colordiffuse="disabled">$PARAM[icon]</textureradioondisabled>
+				<onclick condition="$PARAM[condition_1]">$PARAM[onclick_1]</onclick>
+				<onclick condition="$PARAM[condition_2]">$PARAM[onclick_2]</onclick>
+				<onclick condition="$PARAM[condition_3]">$PARAM[onclick_3]</onclick>
+				<onclick condition="$PARAM[condition_4]">$PARAM[onclick_4]</onclick>
+				<onclick condition="$PARAM[condition_5]">$PARAM[onclick_5]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<animation effect="fade" start="100" end="0" time="300" delay="300">Hidden</animation>
 			</control>

@@ -178,8 +178,8 @@ msgstr "Ordre"
 
 #: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
 msgctxt "#31033"
-msgid "Your rating"
-msgstr "Votre note"
+msgid "My rating"
+msgstr "Ma note"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31034"
@@ -536,15 +536,15 @@ msgctxt "#31124"
 msgid "Show images on map"
 msgstr "Afficher les images sur la carte"
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#31125"
-msgid "Press [B]Up[/B] for actor info"
-msgstr "Appuyer sur [B]Haut[/B] pour afficher les informations de l'acteur"
+msgid "is"
+msgstr "est"
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
-msgid "Press OK to read plot"
-msgstr "Appuyer sur [B]OK[/B] pour afficher le synopsis"
+msgid "Press [B]OK[/B] to show plot"
+msgstr "Appuyer sur [B]OK[/B] pour afficher le résumé"
 
 #: /xml/Includes_MediaMenu.xml
 msgctxt "#31127"
@@ -1513,8 +1513,8 @@ msgstr "Vue forcée pour les clips musicaux"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40159"
-msgid "Enable music themes for movies and TV shows (theme.mp3 files)"
-msgstr "Activer les thèmes musicaux pour les films et séries TV (fichiers theme.mp3)"
+msgid "Show fullscreen video info for movies and TV shows"
+msgstr "Afficher les informations vidéos en plein écran pour les films et séries TV"
 
 #: /xml/Variables.xml
 msgctxt "#40160"
@@ -1818,20 +1818,20 @@ msgctxt "#40219"
 msgid "Optional add-ons"
 msgstr "Extensions facultatives"
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#40220"
-msgid "Click button to play movie trailer[CR][CR][CR]Click again to stop playback"
-msgstr "Cliquez sur le bouton pour lire la bande-annonce du film[CR][CR][CR]Cliquez à nouveau pour stopper la lecture"
+msgid "Directed by"
+msgstr "Réalisés par"
 
 #: /xml/Variables.xml
 msgctxt "#40221"
-msgid "Stop playback"
-msgstr "Stopper la lecture"
+msgid "Similar to"
+msgstr "Similaires à"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40222"
-msgid "Play trailers on movie information screen"
-msgstr "Lire les bandes-annonces sur l'écran des informations du film"
+msgid "Play trailers in full screen"
+msgstr "Lire les bandes-annonces en plein écran"
 
 #: /xml/SkinSettings.xml
 msgctxt "#40223"
@@ -2142,3 +2142,153 @@ msgstr "Couleur du texte de mes notes"
 msgctxt "#40284"
 msgid "Loading..."
 msgstr "Chargement..."
+
+#: /xml/SkinSettings.xml
+msgctxt "#40285"
+msgid "Parental control related settings."
+msgstr "Paramètres relatifs au contrôle parental."
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#40286"
+msgid "Select Resolution"
+msgstr "Sélectionner la résolution"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#40287"
+msgid "Date added"
+msgstr "Date d'ajout"
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#40288"
+msgid "Show extended info"
+msgstr "Afficher les informations étendues"
+
+#: /xml/Variables.xml
+msgctxt "#40289"
+msgid "By"
+msgstr "Par"
+
+#: /xml/Variables.xml
+msgctxt "#40290"
+msgid "Movies from movie set"
+msgstr "Films de la saga"
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#40291"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr "Appuyer sur [B]BAS[/B] pour afficher les informations du film sélectionné"
+
+#: /xml/Variables.xml
+msgctxt "#40292"
+msgid "Lists settings"
+msgstr "Paramètres des listes"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40293"
+msgid "Actors list"
+msgstr "Liste des acteurs"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40294"
+msgid "Episode count"
+msgstr "Nombre d'épisodes"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40295"
+msgid "Movies from director"
+msgstr "Films du réalisateur"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40296"
+msgid "Similar movies"
+msgstr "Films similaires"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40297"
+msgid "Movies from studio"
+msgstr "Films du studio"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40298"
+msgid "Next Up episodes"
+msgstr "Prochains épisodes à regarder"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40299"
+msgid "Similar TV shows"
+msgstr "Séries TV similaires"
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40300"
+msgid "Fanarts list"
+msgstr "Liste des fanarts"
+
+#: /xml/Variables.xml
+msgctxt "#40301"
+msgid "Albums from library"
+msgstr "Albums de la bibliothèque"
+
+#: /xml/Variables.xml
+msgctxt "#40302"
+msgid "Complete discography"
+msgstr "Discographie complète"
+
+#: /xml/Variables.xml
+msgctxt "#40303"
+msgid "Songs from album"
+msgstr "Chansons de l'album"
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#40304"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr "Appuyer sur [B]OK[/B] pour afficher la pochette arrière"
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40305"
+msgid "Episode of the season"
+msgstr "Episodes de la saison"
+
+#: /xml/Variables.xml
+msgctxt "#40306"
+msgid "Posters"
+msgstr "Affiches"
+
+#: /xml/Variables.xml
+msgctxt "#40307"
+msgid "Fanarts"
+msgstr "Fanarts"
+
+#: /xml/Variables.xml
+msgctxt "#40308"
+msgid "Resume playback at"
+msgstr "Reprendre la lecture à"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#40309"
+msgid "Press [B]OK[/B] to show biography"
+msgstr "Appuyer sur [B]OK[/B] pour afficher la biographie"
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#40310"
+msgid "Website"
+msgstr "Site Internet"
+
+#: /xml/Variables.xml
+msgctxt "#40311"
+msgid "Role in movie"
+msgstr "Rôle dans le film"
+
+#: /xml/Variables.xml
+msgctxt "#40312"
+msgid "Crew member in movie"
+msgstr "Membre d'équipe dans le film"
+
+#: /xml/Variables.xml
+msgctxt "#40313"
+msgid "Role in TV show"
+msgstr "Rôle dans la série TV"
+
+#: /xml/Variables.xml
+msgctxt "#40314"
+msgid "Crew member in TV show"
+msgstr "Membre d'équipe dans la série TV"

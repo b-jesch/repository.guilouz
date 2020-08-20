@@ -76,13 +76,6 @@
 					<onclick>Skin.ToggleSetting(ScopeMode)</onclick>
 					<selected>Skin.HasSetting(ScopeMode)</selected>
 				</control>
-				<!--<control type="button" id="1092">
-					<label>  ∟$LOCALIZE[21374]</label>
-					<include>DefaultSettingButton</include>
-					<onclick>Skin.SelectBool(21374, 40277|ratio_177, 40278|ratio_185, 40275|ratio_235, 40279|ratio_237, 40276|ratio_240)</onclick>
-					<label2>$VAR[ScopeSettingLabel2Var]</label2>
-					<visible>Skin.HasSetting(ScopeMode)</visible>
-				</control>-->
 				<control type="button" id="1092">
 					<label>  ∟$LOCALIZE[21374]</label>
 					<include>DefaultSettingButton</include>
@@ -100,6 +93,12 @@
 					<include>DefaultSettingButton</include>
 					<selected>Skin.HasSetting(SmallOSDVideo)</selected>
                     <onclick>Skin.ToggleSetting(SmallOSDVideo)</onclick>
+				</control>
+				<control type="radiobutton" id="114">
+					<label>$LOCALIZE[40159]</label>
+					<include>DefaultSettingButton</include>
+					<selected>!Skin.HasSetting(ExtendedOSDInfo)</selected>
+                    <onclick>Skin.ToggleSetting(ExtendedOSDInfo)</onclick>
 				</control>
 				<control type="radiobutton" id="105">
 					<label>$LOCALIZE[40230]</label>
@@ -148,7 +147,7 @@
 				<control type="button" id="104">
 					<label>$LOCALIZE[10041]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(ScopeMode)|Skin.Reset(scope_mode)|Skin.Reset(SmallOSDVideo)|Skin.Reset(Hide_OSDInfo)|Skin.Reset(disable_PauseOnExtraInfos)|Skin.Reset(enable_playerclearlogo)|Skin.Reset(enable_playerclearart)|Skin.Reset(show_discart)|Skin.Reset(disable_PVRNextUp)|Skin.Reset(show_musicvideoinfo))</onclick>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(ScopeMode)|Skin.Reset(scope_mode)|Skin.Reset(SmallOSDVideo)|Skin.Reset(ExtendedOSDInfo)|Skin.Reset(Hide_OSDInfo)|Skin.Reset(disable_PauseOnExtraInfos)|Skin.Reset(enable_playerclearlogo)|Skin.Reset(enable_playerclearart)|Skin.Reset(show_discart)|Skin.Reset(disable_PVRNextUp)|Skin.Reset(show_musicvideoinfo))</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="200">
@@ -812,14 +811,8 @@
 				<control type="radiobutton" id="920">
 					<include>DefaultSettingButton</include>
 					<label>$LOCALIZE[40222]</label>
-					<onclick>Skin.ToggleSetting(TrailerInWindow)</onclick>
-					<selected>Skin.HasSetting(TrailerInWindow)</selected>
-				</control>
-				<control type="radiobutton" id="921">
-					<include>DefaultSettingButton</include>
-					<label>$LOCALIZE[40159]</label>
-					<onclick>Skin.ToggleSetting(MusicTheme)</onclick>
-					<selected>!Skin.HasSetting(MusicTheme)</selected>
+					<onclick>Skin.ToggleSetting(TrailerFullscreen)</onclick>
+					<selected>Skin.HasSetting(TrailerFullscreen)</selected>
 				</control>
 				<control type="radiobutton" id="905">
 					<label>$LOCALIZE[40149]</label>
@@ -893,7 +886,7 @@
 				<control type="button" id="915">
 					<label>$LOCALIZE[10041]</label>
 					<include>DefaultSettingButton</include>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(autoscroll)|Skin.Reset(hide_plotforspoiler)|Skin.Reset(hide_thumbforspoiler)|Skin.Reset(LibraryClearLogo)|Skin.Reset(enable_LibraryDiscArt)|Skin.Reset(enable_LibraryDiscArtOverlay)|Skin.Reset(TrailerInWindow)|Skin.Reset(ForcedViews.Enabled))</onclick>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10041],message=$LOCALIZE[10042],yesaction=Skin.Reset(autoscroll)|Skin.Reset(hide_plotforspoiler)|Skin.Reset(hide_thumbforspoiler)|Skin.Reset(LibraryClearLogo)|Skin.Reset(enable_LibraryDiscArt)|Skin.Reset(enable_LibraryDiscArtOverlay)|Skin.Reset(TrailerFullscreen)|Skin.Reset(ForcedViews.Enabled))</onclick>
 				</control>
 			</control>
 			<control type="grouplist" id="700">

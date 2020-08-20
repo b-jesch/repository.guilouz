@@ -1,285 +1,467 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window type="dialog" id="1141">
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">5000</defaultcontrol>
 	<controls>
+		<control type="image">
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<aspectratio>scale</aspectratio>
+			<texture background="true" colordiffuse="37FFFFFF">colors/black.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
+			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		</control>
 		<control type="group">
-			<centertop>50%</centertop>
-			<height>1080</height>
-			<centerleft>50%</centerleft>
-			<width>1920</width>
 			<control type="group">
-				<include>OpenClose_Left</include>
-				<top>158</top>
-				<left>30</left>
-				<control type="image" id="3334">
-					<top>-132</top>
-					<left>44</left>
-					<width>574</width>
-					<height>110</height>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
-					<texture fallback="fallback.png">$VAR[PlayerInfoClearLogoVar]</texture>
-					<visible>!Skin.HasSetting(show_artistclearlogo)</visible>
-				</control>
-				<control type="group">
-					<left>81</left>
-					<bottom>77</bottom>
-					<width>500</width>
-					<height>500</height>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Skin.HasSetting(show_disc)</visible>
-					<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
-					<control type="image" id="88888">
-						<left>0</left>
-						<bottom>0</bottom>
-						<width>500</width>
-						<height>500</height>
-						<aligny>top</aligny>
-						<aspectratio align="left">keep</aspectratio>
-						<fadetime>300</fadetime>
-						<texture background="true" fallback="osd/cd.png">$VAR[PlayerInfoDiscArtVar]</texture>
-					</control>
-					<control type="label">
-						<left>90</left>
-						<bottom>340</bottom>
-						<width>320</width>
-						<height>93</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font-Disc</font>
-						<label>$VAR[MusicPlayerDiscTitleVar]</label>
-						<textcolor>black</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
-					</control>
-					<control type="label">
-						<left>90</left>
-						<bottom>64</bottom>
-						<width>320</width>
-						<height>93</height>
-						<align>center</align>
-						<aligny>center</aligny>
-						<font>Font-Disc</font>
-						<label>$VAR[MusicPlayerDiscAlbumVar]</label>
-						<textcolor>black</textcolor>
-						<wrapmultiline>true</wrapmultiline>
-						<visible>String.IsEqual(Control.GetLabel(88888),osd/cd.png)</visible>
-					</control>
+				<top>50</top>
+				<left>50</left>
+				<include>OpenClose_Right</include>
+				<control type="image">
+					<top>-20</top>
+					<left>-20</left>
+					<width>340</width>
+					<height>340</height>
+					<texture>colors/black.png</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
 				</control>
 				<control type="button" id="1300">
-					<top>-2</top>
-					<left>20</left>
-					<width>622</width>
-					<height>622</height>
-					<onright>130</onright>
-					<ondown>9000</ondown>
+					<left>-25</left>
+					<top>-25</top>
+					<width>350</width>
+					<height>350</height>
+					<onright>138</onright>
+					<ondown>5000</ondown>
+					<onclick>SetFocus(9003)</onclick>
 					<label/>
 					<texturenofocus/>
 					<visible>!String.IsEmpty(Player.Art(album.back))</visible>
 				</control>
 				<control type="image">
-					<left>24</left>
-					<top>2</top>
-					<width>614</width>
-					<height>614</height>
+					<left>0</left>
+					<top>0</top>
+					<width>300</width>
+					<height>300</height>
 					<aspectratio>scale</aspectratio>
-					<texture>dialogs/dialog-bg-nobo.png</texture>
-					<bordertexture border="21">overlays/shadow.png</bordertexture>
-					<bordersize>20</bordersize>
-					<visible>!Control.HasFocus(1300)</visible>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>44</left>
-					<top>22</top>
-					<width>574</width>
-					<height>574</height>
-					<aspectratio aligny="top">scale</aspectratio>
 					<fadetime>300</fadetime>
 					<texture background="true" fallback="DefaultAudio.png">$VAR[MusicPlayerCover]</texture>
 					<animation effect="fade" time="150">VisibleChange</animation>
-					<visible>Window.IsVisible(MusicVisualisation.xml) + !Pvr.IsPlayingRadio + !Player.IsInternetStream</visible>
 				</control>
 				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>44</left>
-					<top>22</top>
-					<width>574</width>
-					<height>574</height>
-					<aspectratio>stretch</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true" colordiffuse="FF1E1E1E">colors/white.png</texture>
-					<animation effect="fade" time="150">VisibleChange</animation>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>44</left>
-					<top>22</top>
-					<width>574</width>
-					<height>574</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$VAR[RadioPlayerCover]</texture>
-					<animation effect="fade" time="150">VisibleChange</animation>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>64</left>
-					<top>42</top>
-					<width>534</width>
-					<height>534</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true" fallback="DefaultAudio.png">$INFO[Player.Art(thumb)]</texture>
-					<animation effect="fade" time="150">VisibleChange</animation>
-					<visible>String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.AlbumThumb)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Thumb))</visible>
-					<visible>[VideoPlayer.Content(LiveTV) + Pvr.IsPlayingRadio] | [Window.IsVisible(MusicVisualisation.xml) + Player.IsInternetStream]</visible>
-				</control>
-				<control type="image">
-					<depth>DepthContentPopout</depth>
-					<left>44</left>
-					<top>22</top>
-					<width>574</width>
-					<height>574</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$INFO[Player.Art(album.back)]</texture>
-					<animation effect="fade" time="150">VisibleChange</animation>
-					<visible>Control.HasFocus(1300) + !String.IsEmpty(Player.Art(album.back))</visible>
+					<left>-20</left>
+					<top>351</top>
+					<width>340</width>
+					<height>96</height>
+					<aspectratio aligny="bottom">keep</aspectratio>
+					<texture>$VAR[BannerPlayerArtVar]</texture>
+					<bordertexture border="21">overlays/shadow.png</bordertexture>
+					<bordersize>20</bordersize>
 				</control>
 			</control>
-			<control type="image">
-				<right>0</right>
-				<bottom>0</bottom>
-				<width>356</width>
-				<height>200</height>
-				<texture background="true">$VAR[PlayerInfoClearArtVar]</texture>
-				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+			<control type="image" id="3334">
+				<top>170</top>
+				<right>50</right>
+				<width>284</width>
+				<height>110</height>
+				<aspectratio align="right" aligny="top">keep</aspectratio>
+				<texture background="true" fallback="fallback.png">$VAR[PlayerInfoClearLogoVar]</texture>
+				<visible>!Skin.HasSetting(show_artistclearlogo)</visible>
 				<include>OpenClose_Right</include>
-				<include>Visible_Right</include>
 			</control>
 			<control type="group">
 				<include>OpenClose_Right</include>
-				<include>Visible_Right</include>
-				<left>90</left>
-				<control type="group">
-					<control type="image">
-						<left>586</left>
-						<top>160</top>
-						<width>1190</width>
-						<height>253</height>
-						<aspectratio align="center" aligny="center">keep</aspectratio>
-						<texture>$VAR[BannerPlayerArtVar]</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-						<visible>![String.IsEmpty(Player.Art(banner)) + String.IsEmpty(Player.Art(artist.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Banner))]</visible>
-					</control>
-					<control type="image">
-						<left>586</left>
-						<top>160</top>
-						<width>1190</width>
-						<height>253</height>
-						<aspectratio aligny="top">scale</aspectratio>
-						<texture fallback="special://skin/extras/home-images/radio.jpg">$VAR[PlayerInfoFanartVar]</texture>
-						<bordertexture border="21">overlays/shadow.png</bordertexture>
-						<bordersize>20</bordersize>
-						<visible>[String.IsEmpty(Player.Art(banner)) + String.IsEmpty(Player.Art(artist.banner)) + String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.Banner))]</visible>
-					</control>
-				</control>
-				<control type="group">
-					<top>395</top>
-					<control type="button" id="130">
-						<onup>9000</onup>
-						<ondown>9000</ondown>
-						<onleft>1300</onleft>
-						<left>586</left>
-						<width>1190</width>
-						<height>379</height>
-						<label/>
-						<texturenofocus border="21">dialogs/dialog-bg.png</texturenofocus>
-						<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
-						<onclick>SetProperty(TextViewer_Text,$ESCINFO[Window(Home).Property(SkinHelper.Player.Plot)],home)</onclick>
-						<onclick>ActivateWindow(1102)</onclick>
-					</control>
-				</control>
-				<control type="textbox">
-					<left>626</left>
-					<top>420</top>
-					<width>1113</width>
-					<height>328</height>
-					<align>justify</align>
-					<label fallback="19055">$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll delay="7000" time="4000" repeat="7000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>!String.IsEqual(Skin.Font, Arial)</visible>
-				</control>
-				<control type="textbox">
-					<left>626</left>
-					<top>426</top>
-					<width>1113</width>
-					<height>317</height>
-					<align>justify</align>
-					<label fallback="19055">$INFO[Window(Home).Property(SkinHelper.Player.Plot)]</label>
-					<wrapmultiline>true</wrapmultiline>
-					<autoscroll delay="7000" time="4000" repeat="7000">Skin.HasSetting(AutoScroll)</autoscroll>
-					<visible>String.IsEqual(Skin.Font, Arial)</visible>
-				</control>
-				<control type="grouplist" id="9000">
-					<left>586</left>
-					<top>750</top>
-					<width>1834</width>
-					<height>300</height>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<onup>130</onup>
-					<ondown>501</ondown>
+				<left>384</left>
+				<right>30</right>
+				<top>50</top>
+				<control type="label">
+					<top>-14</top>
+					<left>16</left>
+					<right>20</right>
+					<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year, (,)]</label>
+					<font>font52_title</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
 					<align>left</align>
-					<itemgap>-3.6</itemgap>
+					<scroll>true</scroll>
+				</control>
+				<control type="label">
+					<top>55</top>
+					<left>16</left>
+					<right>20</right>
+					<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+					<font>fontplot2</font>
+					<shadowcolor>text_shadow</shadowcolor>
+					<height>65</height>
+					<align>left</align>
+					<textcolor>$VAR[SkinColorVar]</textcolor>
+					<scroll>true</scroll>
+				</control>
+				<control type="group" id="140">
+					<top>80</top>
+					<control type="button" id="138">
+						<left>-8</left>
+						<right>315</right>
+						<height>295</height>
+						<aligny>bottom</aligny>
+						<label/>
+						<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
+						<onclick>SetProperty(TextViewer_Text,$ESCVAR[MusicPlayerDescriptionVar],home)</onclick>
+						<onclick>ActivateWindow(1102)</onclick>
+						<onleft condition="!String.IsEmpty(Player.Art(album.back))">1300</onleft>
+						<onright>138</onright>
+						<ondown>5000</ondown>
+						<onup>5002</onup>
+						<texturenofocus border="21"></texturenofocus>
+						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+					</control>
+					<control type="textbox">
+						<left>16</left>
+						<top>23</top>
+						<right>340</right>
+						<height>249</height>
+						<align>left</align>
+						<font>fontplot2</font>
+						<label fallback="19055">$VAR[MusicPlayerDescriptionVar]</label>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+					</control>
+					<control type="button" id="138">
+						<left>-8</left>
+						<right>-5</right>
+						<height>295</height>
+						<aligny>bottom</aligny>
+						<label/>
+						<onclick>SetProperty(TextViewer_Header,$LOCALIZE[21821],home)</onclick>
+						<onclick>SetProperty(TextViewer_Text,$ESCVAR[MusicPlayerDescriptionVar],home)</onclick>
+						<onclick>ActivateWindow(1102)</onclick>
+						<onleft condition="!String.IsEmpty(Player.Art(album.back))">1300</onleft>
+						<onright>138</onright>
+						<ondown>5000</ondown>
+						<onup>5002</onup>
+						<texturenofocus border="21"></texturenofocus>
+						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+					</control>
+					<control type="textbox">
+						<left>16</left>
+						<top>23</top>
+						<right>20</right>
+						<height>249</height>
+						<align>left</align>
+						<font>fontplot2</font>
+						<label fallback="19055">$VAR[MusicPlayerDescriptionVar]</label>
+						<autoscroll delay="12000" time="4000" repeat="10000">Skin.HasSetting(AutoScroll)</autoscroll>
+						<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
+					</control>
+				</control>
+				<control type="grouplist" id="5000">
+					<left>-354</left>
+					<top>435</top>
+					<right>-30</right>
+					<height>400</height>
+					<onleft>5000</onleft>
+					<onright>5000</onright>
+					<onup>140</onup>
+					<align>left</align>
+					<itemgap>-16</itemgap>
 					<orientation>horizontal</orientation>
-					<include content="InfoDialogButton">
-						<param name="id" value="442" />
+					<scrolltime tween="quadratic">200</scrolltime>
+					<include content="InfoDialogSmallButton">
+						<param name="id" value="443" />
 						<param name="icon" value="icons/infodialogs/disable.png" />
 						<param name="onclick_1" value="Action(close)" />
 						<param name="label" value="$LOCALIZE[15067]" />
-						<param name="width" value="1190" />
-						<param name="radioposx" value="571" />
+						<param name="oninfo" value="Action(close)" />
 					</include>
 				</control>
 			</control>
-			<control type="group">
-				<visible>String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
-				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="$INFO[Window(Home).Property(SkinHelper.Player.Album)]$INFO[Window(Home).Property(SkinHelper.Player.Year), (,)]" />
-					<param name="sub_label" value="$INFO[Window(Home).Property(SkinHelper.Player.Artist)]" />
-					<param name="id" value="33334" />
-					<param name="subtextcolor" value="$VAR[SkinColorVar]" />
-				</include>
-			</control>
-			<control type="group">
-				<visible>!String.IsEqual(Control.GetLabel(3334),fallback.png)</visible>
-				<include content="InfoDialogTopBarInfo">
-					<param name="main_label" value="$INFO[Window(Home).Property(SkinHelper.Player.Album)]$INFO[Window(Home).Property(SkinHelper.Player.Year), (,)]" />
-					<param name="sub_label" value="$INFO[Window(Home).Property(SkinHelper.Player.Artist)]" />
-					<param name="id" value="33334" />
-					<param name="subtextcolor" value="$VAR[SkinColorVar]" />
-					<param name="left" value="695" />
-					<param name="right" value="74" />
-				</include>
+			<control type="label">
+				<right>50</right>
+				<top>604</top>
+				<align>right</align>
+				<width>1400</width>
+				<height>44</height>
+				<font>font20_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<haspath>true</haspath>
+				<label>$VAR[DialogMusicInfoThumbBackVar]</label>
+				<visible>Control.HasFocus(138)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
 			</control>
 			<control type="label">
-				<left>30</left>
-				<right>510</right>
-				<height>36</height>
-				<bottom>13</bottom>
-				<font>font25_title</font>
-				<aligny>center</aligny>
-				<align>left</align>
-				<label>$VAR[DialogMusicInfoThumbBackVar]</label>
+				<right>50</right>
+				<top>604</top>
+				<align>right</align>
+				<width>1400</width>
+				<height>44</height>
+				<font>font20_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+				<shadowcolor>text_shadow</shadowcolor>
+				<haspath>true</haspath>
+				<label>$LOCALIZE[40304]</label>
+				<visible>Control.HasFocus(1300)</visible>
+				<animation effect="fade" start="0" end="100" time="300" delay="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<animation effect="fade" start="0" end="100" time="300">Visible</animation>
+				<animation effect="fade" start="100" end="0" time="200">Hidden</animation>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<top>365</top>
+			<left>50</left>
+			<width>300</width>
+			<control type="label">
+				<width>300</width>
+				<label>$INFO[MusicPlayer.Genre,$LOCALIZE[515] : [COLOR white],[/COLOR]]</label>
+				<font>fontplot</font>
+				<textcolor>$VAR[SkinColorVar]</textcolor>
 				<scroll>true</scroll>
-				<visible>Control.HasFocus(130)</visible>
-				<animation effect="fade" time="200">VisibleChange</animation>
 			</control>
 		</control>
 		<include condition="Skin.HasSetting(touchmode)">TouchBackButton</include>
+		<control type="group">
+			<left>30</left>
+			<top>600</top>
+			<height>90</height>
+			<right>55</right>
+			<include>OpenClose_Right</include>
+			<control type="label">
+				<left>18</left>
+				<top>0</top>
+				<right>-7</right>
+				<height>90</height>
+				<label>$VAR[DialogInfoButtonsVar]</label>
+				<font>font25_title</font>
+				<shadowcolor>text_shadow</shadowcolor>
+				<scroll>true</scroll>
+			</control>
+		</control>
+		<control type="group">
+			<bottom>0</bottom>
+			<height>430</height>
+			<control type="image" id="3335">
+				<top>0</top>
+				<right>50</right>
+				<width>360</width>
+				<height>360</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" align="right" fallback="fallback.png">$VAR[PlayerInfoDiscArtVar]</texture>
+				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="Player.Playing">Conditional</animation>
+				<include>OpenClose_Right</include>
+			</control>
+			<control type="grouplist" id="6100">
+				<top>0</top>
+				<left>50</left>
+				<height>430</height>
+				<orientation>vertical</orientation>
+				<itemgap>-5</itemgap>
+				<include>OpenClose_Right</include>
+				<animation effect="fade" time="100">VisibleChange</animation>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="172" />
+					<param name="label" value="$LOCALIZE[21893] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Born)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Born))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="173" />
+					<param name="label" value="$LOCALIZE[21897] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Died)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Died))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="174" />
+					<param name="label" value="$LOCALIZE[21894] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Formed)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Formed))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="175" />
+					<param name="label" value="$LOCALIZE[21896] : [COLOR white]$INFO[MusicPlayer.Property(Artist_Disbanded)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_Disbanded))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="176" />
+					<param name="label" value="$LOCALIZE[21898] : [COLOR white]$INFO[MusicPlayer.Property(Artist_YearsActive)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Artist_YearsActive))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="177" />
+					<param name="label" value="$LOCALIZE[175] : [COLOR white]$INFO[MusicPlayer.Property(Album_Mood)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Mood))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="178" />
+					<param name="label" value="$LOCALIZE[176] : [COLOR white]$INFO[MusicPlayer.Property(Album_Style)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Style))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="179" />
+					<param name="label" value="$LOCALIZE[21899] : [COLOR white]$INFO[MusicPlayer.Property(Album_Label)][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Property(Album_Label))" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="161" />
+					<param name="label" value="$INFO[MusicPlayer.Rating,$LOCALIZE[563] : [COLOR white],[/COLOR]]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.Rating)" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="168" />
+					<param name="label" value="$LOCALIZE[40287] : [COLOR white]$INFO[MusicPlayer.DateAdded][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(MusicPlayer.DateAdded)" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+				<include content="InfoDialogMetadata2">
+					<param name="control_id" value="169" />
+					<param name="label" value="$LOCALIZE[573] : [COLOR white]$INFO[Player.FileNameAndPath][/COLOR]" />
+					<param name="visible" value="!String.IsEmpty(Player.FileNameAndPath)" />
+					<param name="textcolor" value="$VAR[SkinColorVar]" />
+					<param name="font" value="fontplot" />
+				</include>
+			</control>
+		</control>
+		<control type="group">
+			<include>OpenClose_Right</include>
+			<top>418</top>
+			<height>70</height>
+			<include content="MediaFlagsInfoDialogLeft">
+				<param name="align" value="left" />
+			</include>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<bottom>10</bottom>
+			<width>24</width>
+			<height>12</height>
+			<texture colordiffuse="$VAR[SkinColorVar]">overlays/arrowdown.png</texture>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+			<visible>ControlGroup(5001).HasFocus</visible>
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<bottom>10</bottom>
+			<width>24</width>
+			<height>12</height>
+			<texture colordiffuse="$VAR[SkinColorVar]" flipy="true">overlays/arrowdown.png</texture>
+			<animation effect="zoom" start="100,0" end="100,100" center="auto" time="200" delay="10">VisibleChange</animation>
+			<visible>Control.HasFocus(5002)</visible>
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(9001)</visible>
+			<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="150">Hidden</animation>
+			<animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
+			<control type="button" id="9001">
+				<visible allowhiddenfocus="true">false</visible>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus />
+				<texturenofocus />
+				<onleft>Control.Move(63000,-1)</onleft>
+				<onright>Control.Move(63000,1)</onright>
+				<onup>Control.Move(63000,1)</onup>
+				<ondown>Control.Move(63000,-1)</ondown>
+				<onback>63000</onback>
+				<oninfo>63000</oninfo>
+				<onclick>SetFocus(63000)</onclick>
+			</control>
+			<control type="image">
+				<texture colordiffuse="ff000000">colors/white.png</texture>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0" end="-1920" condition="!Container(63000).OnNext" reversible="false" time="300" tween="quadratic">Conditional</animation>
+				<animation effect="slide" start="0" end="1920" condition="!Container(63000).OnPrevious" reversible="false" time="300" tween="quadratic">Conditional</animation>
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>1920</width>
+					<height>1080</height>
+					<left>-1920</left>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(63000).ListItem(-1).FileNameAndPath]</texture>
+				</control>
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(63000).ListItem.FileNameAndPath]</texture>
+				</control>
+				<control type="image">
+					<centerleft>50%</centerleft>
+					<centertop>50%</centertop>
+					<width>1920</width>
+					<height>1080</height>
+					<left>1920</left>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[Container(63000).ListItem(1).FileNameAndPath]</texture>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<visible>Control.HasFocus(9003)</visible>
+			<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">Visible</animation>
+			<animation effect="fade" start="0" end="100" time="350" tween="cubic" easing="inout">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="150">Hidden</animation>
+			<animation effect="fade" end="0" start="100" time="150">WindowClose</animation>
+			<control type="button" id="9003">
+				<visible allowhiddenfocus="true">false</visible>
+				<width>1</width>
+				<height>1</height>
+				<texturefocus />
+				<texturenofocus />
+				<onleft>1300</onleft>
+				<onright>1300</onright>
+				<onup>1300</onup>
+				<ondown>1300</ondown>
+				<onback>1300</onback>
+				<oninfo>1300</oninfo>
+				<onclick>SetFocus(1300)</onclick>
+			</control>
+			<control type="image">
+				<texture colordiffuse="C2FFFFFF">colors/black.png</texture>
+			</control>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>710</width>
+				<height>710</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[Player.Art(album.back)]</texture>
+				<bordertexture colordiffuse="$VAR[SkinColorVar]">colors/white.png</bordertexture>
+      			<bordersize>5</bordersize>
+			</control>
+		</control>
+		<control type="button" id="5002">
+			<onup>SetFocus(5000)</onup>
+			<visible allowhiddenfocus="true">false</visible>
+			<width>1</width>
+			<height>1</height>
+			<texturefocus />
+			<texturenofocus />
+		</control>
 	</controls>
 </window>

@@ -1,8 +1,0 @@
-<window type="dialog" id="1145">
-    <onload>Stop</onload>
-    <onload>ClearProperty(PlayingOST,Home)</onload>
-    <visible>String.Contains(Player.Filenameandpath,theme.mp3) + [!Window.IsActive(videos) | String.IsEmpty(ListItem.Path) | ListItem.IsCollection]</visible>
-    <visible>!Skin.HasSetting(MusicTheme)</visible>
-    <controls>
-    </controls>
-</window>

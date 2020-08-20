@@ -7,11 +7,11 @@
 		<control type="group">
 			<top>100</top>
 			<centerleft>50%</centerleft>
-			<width>840</width>
+			<width>930</width>
 			<control type="image">
 				<left>-20</left>
 				<top>-30</top>
-				<width>840</width>
+				<width>930</width>
 				<height>155</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
 				<bordertexture border="21">overlays/shadow.png</bordertexture>
@@ -21,7 +21,7 @@
 				<description>Dialog header</description>
 				<left>40</left>
 				<top>10</top>
-				<width>550</width>
+				<width>640</width>
 				<height>20</height>
 				<aligny>center</aligny>
 				<font>font14</font>
@@ -31,7 +31,7 @@
 				<description>Slider Value</description>
 				<left>0</left>
 				<top>10</top>
-				<width>760</width>
+				<width>850</width>
 				<height>20</height>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -41,7 +41,7 @@
 				<description>Slider</description>
 				<left>40</left>
 				<top>65</top>
-				<width>720</width>
+				<width>810</width>
 				<height>28</height>
 				<onup>11</onup>
 				<ondown>11</ondown>
@@ -58,7 +58,7 @@
 				<animation effect="zoom" start="100,100" end="0,100" center="auto" time="200">WindowClose</animation>
 			</control>
 			<control type="image">
-				<left>770</left>
+				<left>860</left>
 				<top>65</top>
 				<width>28</width>
 				<height>28</height>

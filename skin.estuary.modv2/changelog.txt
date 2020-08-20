@@ -1,3 +1,73 @@
+[B]3.0.6[/B]
+• Keyboard layout fixes
+• Fix for web-dl flag icon with movies have 'web' word in their names
+
+[B]3.0.5[/B]
+• Add number of bits per sample on music OSD
+• Add Russian translation by salashnik
+• Add Czech translation by Pavuucek
+• Add Spanish translation by notorius28
+• Display seekbar on showtime action
+• Improve detection of audio CDs using an infobool
+• Fix Holidays themes
+• Minor fixes
+
+[B]3.0.4[/B]
+• KODI 18 : Bump target GUI API to 5.14.0
+• KODI 18 : Add GUI for Radio Data System (RDS)
+• Add support for 'Next Up' addon by im85288
+• Add 8K flag icon
+• Add Rip audio-cd from 'Disc' on home menu
+• Add Hebrew and Armenian typefaces to the fonts
+• Video OSD and Music OSD enhancements/fixes
+• Minor fixes
+
+[B]3.0.3[/B]
+• KODI 18 : Video OSD - Hide 'Previous' button for non-seekable streams
+• KODI 18 : Game - Add controller description
+• KODI 18 : Game - Add 'Get all' button to controller dialog
+• KODI 18 : Game OSD - Show help dialog on first view
+• KODI 18 : Game OSD - Finish renaming 'View mode' to 'Stretch mode'
+• KODI 18 : Game OSD - Extend help dialog to explain lack of remote support
+• Add 'HDTV', 'VHS' and 'HDDVD' flag icons
+• Fix condition for focus on the stop button
+• Minor fixes
+
+[B]3.0.2[/B]
+• KODI 18 : Add 'sorty by' and 'sort order' for epg grid channels
+• Add 'mp3float' flag icon
+• Fix TV Shows ratings in some views
+• Minor fixes
+
+[B]3.0.1[/B]
+• Add support for CoreELEC settings addon
+• Add DefaultMusicSources icon
+• Game : Update available views
+• Game OSD : Rename 'View mode' setting label to 'Stretch mode'
+• Game OSD : Rename 'Input settings' setting label to 'Controls'
+• Fix lists on dialog video info
+• Fix some textures
+• Fix keyboard navigation
+• Minor fixes
+
+[B]3.0.0[/B]
+• KODI 18 : Add 'Advanced settings' button to settings list for Game OSD
+• KODI 18 : Add video rotation setting for Game OSD
+• Add new video info dialog (Thanks to jurialmunkey & VikkiXavier)
+• Add new music info dialog
+• Add new extended info dialog
+• Add new text viewer window
+• Add setting to disable fullscreen video info for movies and TV shows
+• Remove music themes feature which caused crashes
+• Minor fixes
+
+[B]2.9.9[/B]
+• KODI 18 : Allow user to select resolutions
+• Add video fps flag icon on OSD
+• Changes in playing trailers on video info (Thanks to jurialmunkey)
+• Fix music themes with video addons
+• Minor fixes
+
 [B]2.9.8[/B]
 • KODI 18 : Audio DSP removal
 • Add support for music themes for movies and TV shows (theme.mp3 files) (Thanks to manfeed)

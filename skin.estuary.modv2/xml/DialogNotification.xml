@@ -49,7 +49,7 @@
 				<scrollout>false</scrollout>
 				<pauseatend>2000</pauseatend>
 			</control>
-			<control type="textbox" id="402">
+			<control type="fadelabel" id="402">
 				<description>Line 2 Label</description>
 				<left>151</left>
 				<top>68</top>
@@ -57,7 +57,8 @@
 				<height>60</height>
 				<font>font27_narrow</font>
 				<aligny>center</aligny>
-				<autoscroll delay="1000" time="1000" repeat="1000">true</autoscroll>
+				<scrollout>false</scrollout>
+				<pauseatend>2000</pauseatend>
 			</control>
 		</control>
 	</controls>

@@ -159,16 +159,23 @@
 					</control>
 					<control type="button" id="110">
 						<description>(0,10) key button</description>
-						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">8</onup>
+						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">170</onup>
 						<onup condition="Integer.IsGreater(Container(9010).NumItems,0)">9010</onup>
 						<ondown>130</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="111">
 						<description>(0,11) key button</description>
-						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">8</onup>
+						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">171</onup>
 						<onup condition="Integer.IsGreater(Container(9010).NumItems,0)">9010</onup>
 						<ondown>131</ondown>
+						<include>KeyboardButton</include>
+					</control>
+					<control type="button" id="112">
+						<description>(0,12) key button</description>
+						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">172</onup>
+						<onup condition="Integer.IsGreater(Container(9010).NumItems,0)">9010</onup>
+						<ondown>132</ondown>
 						<include>KeyboardButton</include>
 					</control>
 				</control>
@@ -414,19 +421,19 @@
 					<control type="button" id="170">
 						<description>(3,10) key button</description>
 						<onup>150</onup>
-						<ondown>8</ondown>
+						<ondown>110</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="171">
 						<description>(3,11) key button</description>
-						<onup>501</onup>
-						<ondown>8</ondown>
+						<onup>151</onup>
+						<ondown>111</ondown>
 						<include>KeyboardButton</include>
 					</control>
 					<control type="button" id="172">
 						<description>(3,12) key button</description>
-						<onup>502</onup>
-						<ondown>8</ondown>
+						<onup>152</onup>
+						<ondown>112</ondown>
 						<include>KeyboardButton</include>
 					</control>
 				</control>
@@ -646,8 +653,8 @@
 				<content>$VAR[AutoCompletionContentVar]</content>
 			</control>
 			<control type="label" id="313">
-				<left>60</left>
-				<top>690</top>
+				<centerleft>50%</centerleft>
+				<top>290</top>
 				<width>1480</width>
 				<height>90</height>
 				<font>font37</font>
@@ -657,22 +664,22 @@
 			<control type="group">
 				<visible>Control.IsVisible(313)</visible>
 				<control type="image">
-					<left>20</left>
-					<top>690</top>
+					<centerleft>50%</centerleft>
+					<top>290</top>
 					<width>1560</width>
 					<height>90</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="image">
-					<left>20</left>
-					<top>770</top>
+					<centerleft>50%</centerleft>
+					<top>370</top>
 					<width>1560</width>
 					<height>90</height>
 					<texture border="40">buttons/dialogbutton-nofo.png</texture>
 				</control>
 				<control type="label" id="314">
-					<left>60</left>
-					<top>770</top>
+					<centerleft>50%</centerleft>
+					<top>370</top>
 					<width>1480</width>
 					<height>90</height>
 					<font>font37</font>

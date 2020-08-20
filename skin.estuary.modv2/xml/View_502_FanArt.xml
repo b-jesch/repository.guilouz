@@ -44,7 +44,7 @@
 					<height>290</height>
 					<texture background="true">lists/panel.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>!String.IsEqual(ListItem.DbType,musicvideo) + !ListItem.IsCollection + !ListItem.IsParentFolder + ![String.IsEmpty(Listitem.Art(poster)) + !String.IsEqual(ListItem.DbType,episode)]</visible>
+					<visible>!String.IsEqual(ListItem.DbType,musicvideo) + !ListItem.IsCollection + !ListItem.IsParentFolder</visible>
 				</control>
 				<control type="image">
 					<left>53</left>

@@ -178,7 +178,7 @@ msgstr ""
 
 #: /xml/DialogVideoInfo.xml /xml/DialogSongInfo.xml
 msgctxt "#31033"
-msgid "Your rating"
+msgid "My rating"
 msgstr ""
 
 #: /xml/DialogVideoInfo.xml
@@ -536,14 +536,14 @@ msgctxt "#31124"
 msgid "Show images on map"
 msgstr ""
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#31125"
-msgid "Press [B]Up[/B] for actor info"
+msgid "is"
 msgstr ""
 
 #: /xml/DialogVideoInfo.xml
 msgctxt "#31126"
-msgid "Press OK to read plot"
+msgid "Press [B]OK[/B] to show plot"
 msgstr ""
 
 #: /xml/Includes_MediaMenu.xml
@@ -1513,7 +1513,7 @@ msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#40159"
-msgid "Enable music themes for movies and TV shows (theme.mp3 files)"
+msgid "Show fullscreen video info for movies and TV shows"
 msgstr ""
 
 #: /xml/Variables.xml
@@ -1818,19 +1818,19 @@ msgctxt "#40219"
 msgid "Optional add-ons"
 msgstr ""
 
-#: /xml/DialogVideoInfo.xml
+#: /xml/Variables.xml
 msgctxt "#40220"
-msgid "Click button to play movie trailer[CR][CR][CR]Click again to stop playback"
+msgid "Directed by"
 msgstr ""
 
 #: /xml/Variables.xml
 msgctxt "#40221"
-msgid "Stop playback"
+msgid "Similar to"
 msgstr ""
 
 #: /xml/SkinSettings.xml
 msgctxt "#40222"
-msgid "Play trailers on movie information screen"
+msgid "Play trailers in full screen"
 msgstr ""
 
 #: /xml/SkinSettings.xml
@@ -2141,4 +2141,154 @@ msgstr ""
 #: /xml/Includes.xml
 msgctxt "#40284"
 msgid "Loading..."
+msgstr ""
+
+#: /xml/SkinSettings.xml
+msgctxt "#40285"
+msgid "Parental control related settings."
+msgstr ""
+
+#: /xml/Custom_1101_SettingsList.xml
+msgctxt "#40286"
+msgid "Select Resolution"
+msgstr ""
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#40287"
+msgid "Date added"
+msgstr ""
+
+#: /xml/DialogVideoInfo.xml
+msgctxt "#40288"
+msgid "Show extended info"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40289"
+msgid "By"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40290"
+msgid "Movies from movie set"
+msgstr ""
+
+#: /xml/Custom_1132_MoviesSetsInfo.xml
+msgctxt "#40291"
+msgid "Press [B]DOWN[/B] to show info from selected movie"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40292"
+msgid "Lists settings"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40293"
+msgid "Actors list"
+msgstr ""
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40294"
+msgid "Episode count"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40295"
+msgid "Movies from director"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40296"
+msgid "Similar movies"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40297"
+msgid "Movies from studio"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40298"
+msgid "Next Up episodes"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40299"
+msgid "Similar TV shows"
+msgstr ""
+
+#: /xml/Custom_1104_InfoDialogList.xml
+msgctxt "#40300"
+msgid "Fanarts list"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40301"
+msgid "Albums from library"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40302"
+msgid "Complete discography"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40303"
+msgid "Songs from album"
+msgstr ""
+
+#: /xml/DialogMusicInfo.xml
+msgctxt "#40304"
+msgid "Press [B]OK[/B] to show back thumb"
+msgstr ""
+
+#: /xml/script-script.extendedinfo-DialogVideoInfo.xml
+msgctxt "#40305"
+msgid "Episode of the season"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40306"
+msgid "Posters"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40307"
+msgid "Fanarts"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40308"
+msgid "Resume playback at"
+msgstr ""
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#40309"
+msgid "Press [B]OK[/B] to show biography"
+msgstr ""
+
+#: /xml/script-script.extendedinfo-DialogInfo.xml
+msgctxt "#40310"
+msgid "Website"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40311"
+msgid "Role in movie"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40312"
+msgid "Crew member in movie"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40313"
+msgid "Role in TV show"
+msgstr ""
+
+#: /xml/Variables.xml
+msgctxt "#40314"
+msgid "Crew member in TV show"
 msgstr ""

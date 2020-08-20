@@ -27,7 +27,8 @@
 			<onclick>Action(close)</onclick>
 		</control>
 		<control type="group">
-			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">conditional</animation>
+			<animation effect="slide" end="0,-263" time="0" condition="Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(Custom_1132_MoviesSetsInfo.xml)">Conditional</animation>
+			<animation effect="slide" end="-225" time="0" condition="Window.IsActive(home)">Conditional</animation>
 			<animation effect="slide" end="-340,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-370,-20" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[40005]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="0,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[535])">Conditional</animation>
@@ -52,7 +53,7 @@
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + !String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<animation effect="slide" end="-40,-40" time="0" condition="String.IsEqual(Container.ViewMode,$LOCALIZE[20020]) + String.IsEqual(Skin.AspectRatio,21:9)">Conditional</animation>
 			<control type="group">
-			<width>470</width>
+			<width>510</width>
 			<height>80</height>
 			<control type="image">
 				<left>0</left>
@@ -128,7 +129,7 @@
 				<description>background image</description>
 				<left>0</left>
 				<top>80</top>
-				<width>470</width>
+				<width>510</width>
 				<height>780</height>
 				<texture colordiffuse="dialog_tint">colors/white.png</texture>
 			</control>
@@ -136,7 +137,7 @@
 				<description>grouplist for context buttons</description>
 				<left>0</left>
 				<top>80</top>
-				<width>470</width>
+				<width>510</width>
 				<height max="780">auto</height>
 				<usecontrolcoords>true</usecontrolcoords>
 			</control>
@@ -151,7 +152,7 @@
 			<description>button template</description>
 			<left>0</left>
 			<top></top>
-			<width>470</width>
+			<width>510</width>
 			<height>65</height>
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[SkinColorVar]">lists/focus.png</texturefocus>

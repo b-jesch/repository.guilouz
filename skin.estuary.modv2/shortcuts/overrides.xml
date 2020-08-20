@@ -64,6 +64,7 @@
     <backgrounddefault labelID="favorites">special://skin/extras/home-images/favorites.jpg</backgrounddefault>
     <backgrounddefault labelID="weather">special://skin/extras/home-images/weather.jpg</backgrounddefault>
     <backgrounddefault labelID="libreelec">special://skin/extras/home-images/libreelec.png</backgrounddefault>
+    <backgrounddefault labelID="coreelec">special://skin/extras/home-images/coreelec.png</backgrounddefault>
     
     <!-- Background -->
     <background label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>

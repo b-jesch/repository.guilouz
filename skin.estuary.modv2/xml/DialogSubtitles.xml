@@ -33,7 +33,7 @@
 						<description>textarea</description>
 						<top>280</top>
 						<width>380</width>
-						<height>40</height>
+						<height>80</height>
 						<align>center</align>
 						<aligny>center</aligny>
 						<wrapmultiline>true</wrapmultiline>

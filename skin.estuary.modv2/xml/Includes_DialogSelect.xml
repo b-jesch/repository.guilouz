@@ -242,8 +242,9 @@
 						<control type="gamewindow">
 							<width>444</width>
 							<height>250</height>
-							<scalingmethod>$INFO[ListItem.Property(game.scalingmethod)]</scalingmethod>
-							<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 						</control>
 						<control type="label">
 							<top>250</top>
@@ -289,8 +290,9 @@
 						<control type="gamewindow">
 							<width>444</width>
 							<height>250</height>
-							<scalingmethod>$INFO[ListItem.Property(game.scalingmethod)]</scalingmethod>
-							<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 						</control>
 						<control type="label">
 							<top>250</top>
@@ -376,8 +378,9 @@
 						<control type="gamewindow">
 							<width>444</width>
 							<height>250</height>
-							<scalingmethod>$INFO[ListItem.Property(game.scalingmethod)]</scalingmethod>
-							<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 						</control>
 						<control type="label">
 							<top>255</top>
@@ -423,8 +426,9 @@
 						<control type="gamewindow">
 							<width>444</width>
 							<height>250</height>
-							<scalingmethod>$INFO[ListItem.Property(game.scalingmethod)]</scalingmethod>
-							<viewmode>$INFO[ListItem.Property(game.viewmode)]</viewmode>
+							<videofilter>$INFO[ListItem.Property(game.videofilter)]</videofilter>
+							<stretchmode>$INFO[ListItem.Property(game.stretchmode)]</stretchmode>
+							<rotation>$INFO[ListItem.Property(game.videorotation)]</rotation>
 						</control>
 						<control type="label">
 							<top>255</top>

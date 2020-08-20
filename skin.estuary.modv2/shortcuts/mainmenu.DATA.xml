@@ -178,4 +178,12 @@
         <action>RunAddon(service.libreelec.settings)</action>
         <visible>System.HasAddon(service.libreelec.settings)</visible>
     </shortcut>
+    <shortcut>
+        <label>CoreELEC</label>
+        <label2>Common Shortcut</label2>
+        <defaultID>coreelec</defaultID>
+        <icon>icons/sidemenu/coreelec.png</icon>
+        <action>RunAddon(service.coreelec.settings)</action>
+        <visible>System.HasAddon(service.coreelec.settings)</visible>
+    </shortcut>
   </shortcuts>
